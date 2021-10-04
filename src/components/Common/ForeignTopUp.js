@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 export default function ForeignTopUp(props) {
+
+    const history = useHistory()
 
     function topUp() {
         if(window.confirm("Confirm Payment?")) {
@@ -49,7 +52,7 @@ export default function ForeignTopUp(props) {
                 </Container><br/>
                 <Container className="dark-table-container" style={{color: 'white'}}><br/>
                     <Row>
-                        <Col xs={6}><Button variant="danger" href="./foreign-profile" size="lg">Back</Button></Col>
+                        <Col xs={6}><Button variant="danger" onClick={() => history.goBack()} size="lg">Back</Button></Col>
                         <Col><Button variant="primary" size="lg" onClick={() => topUp()}>Next</Button></Col>
                     </Row><br/>
                 </Container>

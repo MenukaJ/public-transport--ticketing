@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 export default function ForeignLogin(props) {
 
+    const history = useHistory()
     return(
         <div className="main">
             <br/>
@@ -17,7 +19,7 @@ export default function ForeignLogin(props) {
             </Container><br/>
             <Container>
                 <Row>
-                    <Col><Button variant="danger" href="./home" size="lg">Back</Button></Col>
+                    <Col><Button variant="danger" onClick={() => history.goBack()} size="lg">Back</Button></Col>
                     <Col><Button variant="primary" size="lg">Proceed</Button></Col>
                 </Row>
             </Container>
