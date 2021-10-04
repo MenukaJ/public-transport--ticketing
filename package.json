@@ -51,5 +51,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/MenukaJ/public-transport-ticketing.git",
+  "author": "68750465+JulienAngelo@users.noreply.github.com",
+  "license": "MIT"
 }

@@ -26,6 +26,8 @@ import UserProfileUpdate from "./components/Common/UserProfileUpdate";
 import RecentRides from "./components/Common/RecentRides";
 import AdminInspectors from "./components/Common/AdminInspectors";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
+import InspectorDashboard from "./components/Dashboard/InspectorDashboard";
+import InspectorReport from "./components/Reports/InspectorReport";
 
 class App extends Component {
   constructor(props) {
@@ -125,6 +127,8 @@ class App extends Component {
             <Route path="/profile-update" component={UserProfileUpdate} />
             <Route path="/recent-rides" component={RecentRides} />
             <Route path="/admin-inspector" component={AdminInspectors} />
+            <Route path="/inspectorDashboard" component={InspectorDashboard} />
+            <Route path="/inspectorReport" component={InspectorReport} />
 
           </Switch>
         </div>
