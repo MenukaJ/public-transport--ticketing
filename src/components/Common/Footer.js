@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
                 <div className="row justify-content-center px-3 py-3 pt-5">
                     <div className="col text-center">
-                        <p className="mb-0">This site is developed for SPM Group Project</p>
+                        <p className="mb-0">This site is developed for CSSE Group Project</p>
                     </div>
                 </div>
             </footer>

@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import BuyerSideNav from "../Navbar/BuyerSideNav";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import authService from "../../services/auth.service";
 import authHeader from "../../services/auth-header";
 import {storage} from "../../firebase";
 import appleCamera from "../../images/apple-camera.png";
+import { useHistory } from "react-router";
 
-export default function BuyerUpdateProfile(props) {
+export default function UserProfileUpdate(props) {
 
+    const history = useHistory();
     const [data, setData] = useState({
         username:"",
         id: "",
@@ -102,7 +103,6 @@ export default function BuyerUpdateProfile(props) {
 
     return(
         <div className="main">
-            <BuyerSideNav/>
             <Container style={{color : 'white'}} className="dark-table-container">
                 <center><h3>Update Profile Details</h3></center>
             </Container>
@@ -160,7 +160,10 @@ export default function BuyerUpdateProfile(props) {
                             <Form.Label>Date of Birth</Form.Label>
                             <Form.Control type="text" defaultValue={data.dob} disabled/>
                         </Form.Group>
-                        <Button type="submit" onClick={(e) => onSubmit(e)} href="./buyer-profile">Update</Button>
+                        <Row>
+                            <Col><Button variant="danger" onClick={() => history.goBack()}>Back</Button></Col>
+                            <Col><Button type="submit" onClick={(e) => onSubmit(e)} href="./buyer-profile">Update</Button></Col>
+                        </Row>
                     </Form>
                 </Col>
             </Container>

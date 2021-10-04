@@ -10,18 +10,19 @@ import { Col } from "react-bootstrap";
 import Select from "react-select";
 import { Button } from "react-bootstrap";
 
-export default function Home(props) {
+export default function PassengerHome(props) {
 
+    const optionsList = ["mm", "mma"]
     return(
         <div><br/>
             <Container className="dark-table-container" style={{color: 'white'}}><br/>  
                 <Form>
                     <Row>
                         <Col>
-                            <Select options={'mm', 'mma'} placeholder="From"/>
+                            <Select options={optionsList} placeholder="From" single autoFocus isSearchable/>
                         </Col>
                         <Col>
-                            <Select options={'mm', 'mma'} placeholder="To"/>
+                            <Select options={optionsList} placeholder="To" single autoFocus isSearchable/>
                         </Col>
                         <Col>
                             <Button type="submit">Search</Button>
@@ -38,7 +39,10 @@ export default function Home(props) {
                 </Row>
             </Container><br/>
             <Container className="dark-table-container" style={{color: 'white'}}>
-                <center><Button variant="success" size="lg" href="/foreign-login"><i><b>For Foreign Passengers</b></i></Button></center>
+                <Row>
+                    <Col><center><Button variant="success" size="lg" href="/foreign-login"><i><b>Go to Top Up</b></i></Button></center></Col>
+                    <Col><center><Button variant="success" size="lg" href="/recent-rides"><i><b>Recent Rides</b></i></Button></center></Col>
+                </Row>
             </Container><br/>
             <Container className="dark-table-container" style={{color: 'white'}}>
                 Popular Routes

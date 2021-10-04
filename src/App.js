@@ -48,6 +48,14 @@ import AdminItemList from "./components/SellerItem/AddItem";
 import AdminAddItem from "./components/SellerItem/AddItem";
 import AdminViewItem from "./components/SellerItem/ViewItem";
 
+import ForeignLogin from "./components/Common/ForeignLogin";
+import ForeignProfile from "./components/Common/ForeignProfile";
+import ForeignTopUp from "./components/Common/ForeignTopUp";
+import PassengerHome from "./components/Common/PassengerHome";
+import UserProfile from "./components/Common/UserProfile";
+import UserProfileUpdate from "./components/Common/UserProfileUpdate";
+import RecentRides from "./components/Common/RecentRides";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -101,7 +109,7 @@ class App extends Component {
 
             {showBuyerBoard && (
               <li className="nav-item">
-                <Link to={"/buyer"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Buyer</Link>
+                <Link to={"/passenger-home"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Buyer</Link>
               </li>
             )}
 
@@ -168,6 +176,14 @@ class App extends Component {
             <Route path="/items-seller" component={AdminItemList} />
             <Route path="/seller-item/add" component={AdminAddItem} />
             <Route path="/item-seller/:id" component={AdminViewItem} />
+
+            <Route path="/foreign-login" component={ForeignLogin} />
+            <Route path="/foreign-profile" component={ForeignProfile} />
+            <Route path="/foreign-topup" component={ForeignTopUp} />
+            <Route path="/passenger-home" component={PassengerHome} />
+            <Route path="/profile" component={UserProfile} />
+            <Route path="/profile-update" component={UserProfileUpdate} />
+            <Route path="/recent-rides" component={RecentRides} />
 
           </Switch>
         </div>
