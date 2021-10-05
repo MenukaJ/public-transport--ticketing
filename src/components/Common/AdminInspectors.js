@@ -2,9 +2,11 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import AdminSideNav from "../Navbar/AdminSideNav";
+import InspectorRouteModal from "./InspectorRouteModal";
 
 export default function AdminInspectors(props) {
 
+    const [modalShow, setModalShow] = React.useState(false);
     const[data, setData] = useState([])
 
     useEffect(() => {
@@ -45,7 +47,8 @@ export default function AdminInspectors(props) {
                         <Row>
                             <Col>{inspector.firstName + " " + inspector.lastName}</Col>
                             <Col>{inspector.phoneNumber}</Col>
-                            <Col><Button>View</Button></Col>
+                            <Col><Button onClick={() => setModalShow(true)}>View</Button></Col>
+                            <InspectorRouteModal show={modalShow} onHide={() => setModalShow(false)} name={inspector.firstName} />
                         </Row>
                     </>
                     )
