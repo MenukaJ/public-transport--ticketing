@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import Cart from "./Cart";
 
 export default function Header() {
     return (
@@ -19,12 +18,8 @@ export default function Header() {
                     <li className="nav-item nav-item-pad">
                         <Link to={"/"} className="nav-link" >About Us</Link>
                     </li>
-                    <li className="nav-item nav-item-pad">
-                        <Link data-toggle="modal" data-target="#myModal" className="nav-link" ><i className="fa fa-shopping-cart"></i>&nbsp; Cart</Link>
-                    </li>
                 </div>
             </nav>
-            <Cart />
         </div>
     )
 }

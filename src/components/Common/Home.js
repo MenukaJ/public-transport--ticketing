@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Header from "./Header";
 import Footer from "./Footer";
-import SlideShow from "./SlideShow";
-import CategoryCarousel from "./CategoryCarousel";
 import { Container } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Row } from "react-bootstrap";

@@ -16,37 +16,6 @@ import AuthService from "./services/auth.service";
 import Home from "./components/Common/Home";
 import Login from "./components/Common/Login";
 import Register from "./components/Common/Register";
-import AdminDashboard from "./components/Dashboard/AdminDashboard";
-import SellerDashboard from "./components/Dashboard/SellerDashboard";
-import BuyerDashboard from "./components/Dashboard/BuyerDashboard";
-import BuyerProfile from "./components/Common/BuyerProfile";
-import BuyerUpdateProfile from "./components/Common/BuyerUpdateProfile";
-import BuyerOrder from "./components/Common/BuyerOrder";
-import BuyerOrderDetails from "./components/Common/BuyerOrderDetails";
-import CategoryList from "./components/Category/CategoryList";
-import AddCategory from "./components/Category/AddCategory";
-import ViewCategory from "./components/Category/ViewCategory";
-import BrandList from "./components/Brand/BrandList";
-import AddBrand from "./components/Brand/AddBrand";
-import ViewBrand from "./components/Brand/ViewBrand";
-import AttributeList from "./components/Attribute/AttributeList";
-import AddAttribute from "./components/Attribute/AddAttribute";
-import ViewAttribute from "./components/Attribute/ViewAttribute";
-import AttributeValueList from "./components/AttributeValue/AttributeValueList";
-import AddAttributeValue from "./components/AttributeValue/AddAttributeValue";
-import ViewAttributeValue from "./components/AttributeValue/ViewAttributeValue";
-import ItemList from "./components/Item/ItemList";
-import AddItem from "./components/Item/AddItem";
-import ViewItem from "./components/Item/ViewItem";
-import ItemAttributeValueList from "./components/ItemAttributeValues/ItemAttributeValueList";
-import CategoryListFront from "./components/Common/CategoryListFront";
-import ItemListFront from "./components/Common/ItemListFront";
-import ViewItemFront from "./components/Common/ViewItemFront";
-import ProceedOrder from "./components/Common/ProceedOrder";
-import AdminReports from "./components/Reports/ReporsList";
-import AdminItemList from "./components/SellerItem/AddItem";
-import AdminAddItem from "./components/SellerItem/AddItem";
-import AdminViewItem from "./components/SellerItem/ViewItem";
 
 import ForeignLogin from "./components/Common/ForeignLogin";
 import ForeignProfile from "./components/Common/ForeignProfile";
@@ -56,6 +25,7 @@ import UserProfile from "./components/Common/UserProfile";
 import UserProfileUpdate from "./components/Common/UserProfileUpdate";
 import RecentRides from "./components/Common/RecentRides";
 import AdminInspectors from "./components/Common/AdminInspectors";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
 
 class App extends Component {
   constructor(props) {
@@ -147,37 +117,6 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/admin" component={AdminDashboard} />
-            <Route path="/seller" component={SellerDashboard} />
-            <Route path="/buyer" component={BuyerDashboard} />
-            <Route path="/buyer-profile" component={BuyerProfile} />
-            <Route path="/buyer-update-profile" component={BuyerUpdateProfile} />
-            <Route path="/buyer-orders" component={BuyerOrder} />
-            <Route path="/buyer-order-details/:id" component={BuyerOrderDetails} />
-            <Route path="/categories-admin" component={CategoryList} />
-            <Route path="/category/add" component={AddCategory} />
-            <Route path="/category-admin/:id" component={ViewCategory} />
-            <Route path="/brands" component={BrandList} />
-            <Route path="/brand/add" component={AddBrand} />
-            <Route path="/brand-admin/:id" component={ViewBrand} />
-            <Route path="/attributes" component={AttributeList} />
-            <Route path="/attribute/add" component={AddAttribute} />
-            <Route path="/attribute/:id" component={ViewAttribute} />
-            <Route path="/attribute-values" component={AttributeValueList} />
-            <Route path="/attribute-value/add" component={AddAttributeValue} />
-            <Route path="/attribute-value/:id" component={ViewAttributeValue} />
-            <Route path="/items-admin" component={ItemList} />
-            <Route path="/item/add" component={AddItem} />
-            <Route path="/item-admin/:id" component={ViewItem} />
-            <Route path="/item-attribute-values/:id" component={ItemAttributeValueList} />
-            <Route path="/common-categories" component={CategoryListFront} />
-            <Route path="/common-items/:id" component={ItemListFront} />
-            <Route path="/view-item/:id" component={ViewItemFront} />
-            <Route path="/order" component={ProceedOrder} />
-            <Route path="/admin-report" component={AdminReports} />
-            <Route path="/items-seller" component={AdminItemList} />
-            <Route path="/seller-item/add" component={AdminAddItem} />
-            <Route path="/item-seller/:id" component={AdminViewItem} />
-
             <Route path="/foreign-login" component={ForeignLogin} />
             <Route path="/foreign-profile" component={ForeignProfile} />
             <Route path="/foreign-topup" component={ForeignTopUp} />
