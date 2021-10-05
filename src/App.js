@@ -55,6 +55,7 @@ import PassengerHome from "./components/Common/PassengerHome";
 import UserProfile from "./components/Common/UserProfile";
 import UserProfileUpdate from "./components/Common/UserProfileUpdate";
 import RecentRides from "./components/Common/RecentRides";
+import AdminInspectors from "./components/Common/AdminInspectors";
 
 class App extends Component {
   constructor(props) {
@@ -184,6 +185,7 @@ class App extends Component {
             <Route path="/profile" component={UserProfile} />
             <Route path="/profile-update" component={UserProfileUpdate} />
             <Route path="/recent-rides" component={RecentRides} />
+            <Route path="/admin-inspector" component={AdminInspectors} />
 
           </Switch>
         </div>

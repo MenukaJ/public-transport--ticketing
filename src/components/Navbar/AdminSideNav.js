@@ -15,7 +15,7 @@ export class AdminSideNav extends Component {
                     <a href="/brands"><i className="fa fa-gift"></i>&nbsp; Brand</a>
                     <a href="/attributes"><i className="fa fa-list-alt"></i>&nbsp; Attribute</a>
                     <a href="/attribute-values"><i className="fa fa-list-ol"></i>&nbsp; Attribute Values</a>
-                    <a href="/items-admin"><i className="fa fa-shopping-cart"></i>&nbsp; Item</a>
+                    <a href="/admin-inspector"><i className="fa fa-shopping-cart"></i>&nbsp; Inspectors</a>
                     <a href="/admin-report"><i className="fa fa-file-text-o"></i>&nbsp; Reports</a>
                     <a href="/roles"><i className="fa fa-users"></i>&nbsp; Admins</a>
                 </div>
