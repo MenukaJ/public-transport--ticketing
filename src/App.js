@@ -129,6 +129,7 @@ class App extends Component {
             <Route path="/admin-inspector" component={AdminInspectors} />
             <Route path="/inspectorDashboard" component={InspectorDashboard} />
             <Route path="/inspectorReport" component={InspectorReport} />
+            
 
           </Switch>
         </div>

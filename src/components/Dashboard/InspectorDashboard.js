@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import InspectorSideNav from "../Navbar/InspectorSideNav.js";
 
-export default function AdminDashboard(props) {
+export default function TestDashboard(props) {
 
     const [data, setData] = useState({
         totalItems: "",
@@ -32,65 +32,49 @@ export default function AdminDashboard(props) {
             <div className="container mt-3 dark-table-main">
                 <h3 className="col-sm-5" style={{ color: 'white' }}>Inspector Dashboard</h3><br />
                 <div className="container dark-table-container">
-                    <div className="row ">
-                        <div className="col-sm-12">
-                            <div className="card-counter conf">
+                    <table style={{ width: '100%' }}>
+                        <tbody>
+                            <tr>
+                                <td colSpan={5}>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
 
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-5">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row" >
-                        <div className="col-md-5">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                        <div className="col-md-7">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-5">
-                            <div className="card-counter conf">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="count-numbers"><h1>{data.totalItems}</h1></span>
-                                <span className="count-name">Items</span>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan={2} rowSpan={4}>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
+                                        
+                                    </div>
+                                </td>
+                                <td colSpan={2} rowSpan={2}>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
+
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan={3} rowSpan={2}>
+                                    <div className="card text-black mt-0 mb-0 mb-3">
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
                 </div>
             </div>
         </div>
