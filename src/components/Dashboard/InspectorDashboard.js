@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import InspectorSideNav from "../Navbar/InspectorSideNav.js";
+import authService from "../../services/auth.service";
 
-export default function TestDashboard(props) {
+export default function InspectorDashboard(props) {
 
     const [data, setData] = useState({
-        totalItems: "",
-        totalCategories: "",
-        totalBrands: "",
-        totalAdmins: "",
-        totalSellers: "",
-        totalBuyers: "",
-        totalOrders: ""
+        startingPoint: "",
+        destination: ""
     })
 
     useEffect(() => {
@@ -19,7 +15,10 @@ export default function TestDashboard(props) {
     }, [])
 
     function getDashboard() {
-        axios.get("https://shopping-backend-api.herokuapp.com/dashboard/admin").then((res) => {
+        
+        const userID = authService.getCurrentUser().id;
+        
+        axios.get("https://public-transport-ticketing.herokuapp.com/inspection/user/"+userID).then((res) => {
             setData(res.data);
         }).catch((err) => {
             alert(err);
@@ -37,7 +36,16 @@ export default function TestDashboard(props) {
                             <tr>
                                 <td colSpan={5}>
                                     <div className="card text-black mt-0 mb-0 mb-3">
-
+                                    <table style={{ width: '100%' }}>
+                                        <tr>
+                                            <td><div>Number of Inspections</div></td>
+                                            <td><div>Number of Bus Routes</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div><span className="count-numbers"><h1>{data.length}</h1></span></div></td>
+                                            <td><div><span className="count-numbers"><h1>{data.length}</h1></span></div></td>
+                                        </tr>
+                                    </table>
 
                                     </div>
                                 </td>
@@ -45,32 +53,13 @@ export default function TestDashboard(props) {
                             <tr>
                                 <td colSpan={2} rowSpan={4}>
                                     <div className="card text-black mt-0 mb-0 mb-3">
-                                        
+                                    <div>Bus Routes</div><br/>
+                                    
                                     </div>
                                 </td>
                                 <td colSpan={2} rowSpan={2}>
                                     <div className="card text-black mt-0 mb-0 mb-3">
-
-                                    </div>
-                                </td>
-                                <td>
-                                    <div className="card text-black mt-0 mb-0 mb-3">
-
-                                    </div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div className="card text-black mt-0 mb-0 mb-3">
-
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colSpan={3} rowSpan={2}>
-                                    <div className="card text-black mt-0 mb-0 mb-3">
-
+                                    <div>Inspections</div>
                                     </div>
                                 </td>
                             </tr>
