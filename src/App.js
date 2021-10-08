@@ -37,7 +37,7 @@ class App extends Component {
 
     this.state = {
       showAdminBoard: false,
-      showSellerBoard: false,
+      showInspectorBoard: false,
       currentUser: undefined,
     };
   }
@@ -49,7 +49,7 @@ class App extends Component {
       this.setState({
         currentUser: user,
         showAdminBoard: user.role.includes("ADMIN"),
-        showSellerBoard: user.role.includes("SELLER"),
+        showInspectorBoard: user.role.includes("INSPECTOR"),
         showPassengerBoard: user.role.includes("PUBLIC_PASSENGER")
       });
     }
@@ -61,7 +61,7 @@ class App extends Component {
 
 
   render() {
-    const { currentUser, showAdminBoard, showSellerBoard, showPassengerBoard } = this.state;
+    const { currentUser, showAdminBoard, showInspectorBoard, showPassengerBoard } = this.state;
 
     return (
       <div>
@@ -75,9 +75,9 @@ class App extends Component {
               </li>
             )}
 
-            {showSellerBoard && (
+            {showInspectorBoard && (
               <li className="nav-item">
-                <Link to={"/seller"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Seller</Link>
+                <Link to={"/inspectorDashboard"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Inspector</Link>
               </li>
             )}
 

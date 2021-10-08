@@ -63,7 +63,7 @@ export default class Login extends Component {
                         this.props.history.push("/passenger-home");
                         window.location.reload();
                     } else if (response.role === 'INSPECTOR') {
-                        this.props.history.push("/home");
+                        this.props.history.push("/inspectorDashboard");
                         window.location.reload();
                     } else {
                         this.props.history.push("/");

@@ -62,7 +62,7 @@ export default function UserProfileUpdate(props) {
 
     function getBuyer() {
         data.username = authService.getCurrentUser().username;
-        axios.get("https://shopping-backend-api.herokuapp.com/auth/buyer/" + data.username).then((res) => {
+        axios.get("https://public-transport-ticketing.herokuapp.com/auth/username/" + data.username).then((res) => {
             setData(res.data);
         }).catch((err) => {
             alert(err);
@@ -154,7 +154,7 @@ export default function UserProfileUpdate(props) {
                         </Form.Group>
                         <Form.Group controlId="nic">
                             <Form.Label>NIC No</Form.Label>
-                            <Form.Control type="text" defaultValue={data.nic} disabled/>
+                            <Form.Control type="text" defaultValue={data.identificationValue} disabled/>
                         </Form.Group>
                         <Form.Group controlId="dob">
                             <Form.Label>Date of Birth</Form.Label>
