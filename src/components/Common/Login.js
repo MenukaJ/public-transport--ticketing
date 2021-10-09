@@ -59,10 +59,10 @@ export default class Login extends Component {
                     if (response.role === 'ADMIN') {
                         this.props.history.push("/admin");
                         window.location.reload();
-                    } else if (response.role === 'BUYER') {
-                        this.props.history.push("/home");
+                    } else if (response.role === 'PUBLIC_PASSENGER') {
+                        this.props.history.push("/passenger-home");
                         window.location.reload();
-                    } else if (response.role === 'SELLER') {
+                    } else if (response.role === 'INSPECTOR') {
                         this.props.history.push("/home");
                         window.location.reload();
                     } else {

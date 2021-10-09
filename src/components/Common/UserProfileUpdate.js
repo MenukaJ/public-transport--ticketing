@@ -126,31 +126,31 @@ export default function UserProfileUpdate(props) {
                     <Form>
                         <Form.Group controlId="firstName">
                             <Form.Label>First Name</Form.Label>
-                            <Form.Control type="text" onChange={(e) => (data.firstName=e.target.value)} defaultValue={data.firstName}></Form.Control>
+                            <Form.Control type="text" onChange={(e) => (data.firstName=e.target.value)} defaultValue={data.firstName} required></Form.Control>
                         </Form.Group>
                         <Form.Group controlId="lastName">
                             <Form.Label>Last Name</Form.Label>
-                            <Form.Control type="text" onChange={(e) => (data.lastName=e.target.value)} defaultValue={data.lastName}/>
+                            <Form.Control type="text" onChange={(e) => (data.lastName=e.target.value)} defaultValue={data.lastName} required/>
                         </Form.Group>
                         <Form.Group controlId="email">
                             <Form.Label>Email Address</Form.Label>
-                            <Form.Control type="email" onChange={(e) => (data.email=e.target.value)} defaultValue={data.email}/>
+                            <Form.Control type="email" onChange={(e) => (data.email=e.target.value)} defaultValue={data.email} required/>
                         </Form.Group>
                         <Form.Group controlId="addressLine1">
                             <Form.Label>Address Line 1</Form.Label>
-                            <Form.Control type="text" onChange={(e) => (data.addressLine1=e.target.value)} defaultValue={data.addressLine1}/>
+                            <Form.Control type="text" onChange={(e) => (data.addressLine1=e.target.value)} defaultValue={data.addressLine1} required/>
                         </Form.Group>
                         <Form.Group controlId="addressLine2">
                             <Form.Label>Address Line 2</Form.Label>
-                            <Form.Control type="text" onChange={(e) => (data.addressLine2=e.target.value)} defaultValue={data.addressLine2}/>
+                            <Form.Control type="text" onChange={(e) => (data.addressLine2=e.target.value)} defaultValue={data.addressLine2} required/>
                         </Form.Group>
                         <Form.Group controlId="addressLine3">
                             <Form.Label>Address Line 3</Form.Label>
-                            <Form.Control type="text" onChange={(e) => (data.addressLine3=e.target.value)} defaultValue={data.addressLine3}/>
+                            <Form.Control type="text" onChange={(e) => (data.addressLine3=e.target.value)} defaultValue={data.addressLine3} required/>
                         </Form.Group>
                         <Form.Group controlId="phoneNumber">
                             <Form.Label>Mobile No</Form.Label>
-                            <Form.Control type="tel" onChange={(e) => (data.phoneNumber=e.target.value)} defaultValue={data.phoneNumber}/>
+                            <Form.Control type="tel" onChange={(e) => (data.phoneNumber=e.target.value)} defaultValue={data.phoneNumber} required/>
                         </Form.Group>
                         <Form.Group controlId="nic">
                             <Form.Label>NIC No</Form.Label>

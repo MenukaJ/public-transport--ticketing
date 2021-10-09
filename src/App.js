@@ -28,6 +28,7 @@ import AdminInspectors from "./components/Common/AdminInspectors";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import InspectorDashboard from "./components/Dashboard/InspectorDashboard";
 import InspectorReport from "./components/Reports/InspectorReport";
+import PassengerTopUp from "./components/Common/PassengerTopUp";
 
 class App extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class App extends Component {
         currentUser: user,
         showAdminBoard: user.role.includes("ADMIN"),
         showSellerBoard: user.role.includes("SELLER"),
-        showBuyerBoard: user.role.includes("BUYER")
+        showPassengerBoard: user.role.includes("PUBLIC_PASSENGER")
       });
     }
   }
@@ -60,7 +61,7 @@ class App extends Component {
 
 
   render() {
-    const { currentUser, showAdminBoard, showSellerBoard, showBuyerBoard } = this.state;
+    const { currentUser, showAdminBoard, showSellerBoard, showPassengerBoard } = this.state;
 
     return (
       <div>
@@ -80,9 +81,9 @@ class App extends Component {
               </li>
             )}
 
-            {showBuyerBoard && (
+            {showPassengerBoard && (
               <li className="nav-item">
-                <Link to={"/passenger-home"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Buyer</Link>
+                <Link to={"/passenger-home"} className="nav-link" ><i className="fa fa-user"></i>&nbsp; Passenger</Link>
               </li>
             )}
 
@@ -129,7 +130,7 @@ class App extends Component {
             <Route path="/admin-inspector" component={AdminInspectors} />
             <Route path="/inspectorDashboard" component={InspectorDashboard} />
             <Route path="/inspectorReport" component={InspectorReport} />
-            
+            <Route path="/passenger-topup" component={PassengerTopUp} />
 
           </Switch>
         </div>

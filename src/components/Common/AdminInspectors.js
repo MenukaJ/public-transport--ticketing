@@ -35,19 +35,19 @@ export default function AdminInspectors(props) {
                 </Row>
             </Container><br/>
             <Container className="dark-table-container" style={{color: 'white'}}>
-                {   data.filter(inspector => inspector.roles[0].name === "ADMIN").length === 0 ?
+                {   data.filter(inspector => inspector.roles[0].name === "INSPECTOR").length === 0 ?
                     <div className="row justify-content-center">
                         <div className="col-auto">
                             <h2 className="home-h1">No Inspectors in The System</h2>
                         </div>
                     </div>
                     :
-                    data.filter(inspector => inspector.roles[0].name === "ADMIN").map(inspector => 
+                    data.filter(inspector => inspector.roles[0].name === "INSPECTOR").map(inspector => 
                     <>
                         <Row>
                             <Col>{inspector.firstName + " " + inspector.lastName}</Col>
                             <Col>{inspector.phoneNumber}</Col>
-                            <Col><Button onClick={() => setModalShow(true)}>View</Button></Col>
+                            <Col><Button onClick={() => setModalShow(true)}>Assign Route</Button></Col>
                             <InspectorRouteModal show={modalShow} onHide={() => setModalShow(false)} name={inspector.firstName} />
                         </Row>
                     </>

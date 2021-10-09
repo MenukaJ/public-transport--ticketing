@@ -9,16 +9,17 @@ import { Button } from "react-bootstrap";
 
 export default function Home(props) {
 
+    const optionsList = ["mm", "mma"]
     return(
         <div><br/>
             <Container className="dark-table-container" style={{color: 'white'}}><br/>  
                 <Form>
                     <Row>
                         <Col>
-                            <Select options={'mm', 'mma'} placeholder="From"/>
+                            <Select options={optionsList} placeholder="From" single autoFocus isSearchable required/>
                         </Col>
                         <Col>
-                            <Select options={'mm', 'mma'} placeholder="To"/>
+                            <Select options={optionsList} placeholder="To" single autoFocus isSearchable required/>
                         </Col>
                         <Col>
                             <Button type="submit">Search</Button>
@@ -27,11 +28,11 @@ export default function Home(props) {
                 </Form>
                 <Row>
                     <Col xs={3}>Ticket Cost</Col>
-                    <Col>95.00</Col>
+                    <Col></Col>
                 </Row>
                 <Row>
                     <Col xs={3}>Bus Route</Col>
-                    <Col>E32</Col>
+                    <Col></Col>
                 </Row>
             </Container><br/>
             <Container className="dark-table-container" style={{color: 'white'}}>

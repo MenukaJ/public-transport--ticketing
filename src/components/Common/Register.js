@@ -74,7 +74,7 @@ export default class Register extends Component {
         this.onChangeAddress2 = this.onChangeAddress2.bind(this);
         this.onChangeAddress3 = this.onChangeAddress3.bind(this);
         this.onChangePhone = this.onChangePhone.bind(this);
-        this.onChangeNic = this.onChangeNic.bind(this);
+        this.onChangeIdentificationValue = this.onChangeIdentificationValue.bind(this);
         this.onChangeDob = this.onChangeDob.bind(this);
         this.customTheme = this.customTheme.bind(this);
 
@@ -90,11 +90,12 @@ export default class Register extends Component {
             addressLine3: "",
             phoneNumber: "",
             successful: false,
+            identificationType: "NIC",
             message: "",
             conferenceId: "1",
             dob: "",
-            nic: "",
-            role: "BUYER",
+            identificationValue: "",
+            role: "",
         };
     }
     customTheme(theme) {
@@ -173,9 +174,9 @@ export default class Register extends Component {
         });
     }
 
-    onChangeNic(e) {
+    onChangeIdentificationValue(e) {
         this.setState({
-            nic: e.target.value
+            identificationValue: e.target.value
         });
     }
 
@@ -210,7 +211,8 @@ export default class Register extends Component {
                 this.state.email,
                 this.state.password,
                 this.state.dob,
-                this.state.nic,
+                this.state.identificationValue,
+                this.state.identificationType,
 
 
             ).then(
@@ -240,8 +242,7 @@ export default class Register extends Component {
 
     render() {
         const options = [
-            { value: 'BUYER', label: 'BUYER' },
-            { value: 'SELLER', label: 'SELLER' }
+            { value: 'PUBLIC_PASSENGER', label: 'PUBLIC_PASSENGER' }
         ]
         return (
             <div className="container">
@@ -349,13 +350,13 @@ export default class Register extends Component {
                                         />
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="nic">NIC (OLD)</label>
+                                        <label htmlFor="identificationValue">NIC (OLD)</label>
                                         <Input
                                             type="text"
                                             className="form-control"
-                                            name="nic"
-                                            value={this.state.nic}
-                                            onChange={this.onChangeNic}
+                                            name="identificationValue"
+                                            value={this.state.identificationValue}
+                                            onChange={this.onChangeIdentificationValue}
                                             validations={[required, vNic]}
                                         />
                                     </div>
