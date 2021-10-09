@@ -30,7 +30,7 @@ export default function UserProfile(props) {
 
     function getBuyer() {
         data.username = authService.getCurrentUser().username;
-        axios.get("https://shopping-backend-api.herokuapp.com/auth/buyer/" + data.username).then((res) => {
+        axios.get("https://public-transport-ticketing.herokuapp.com/auth/username/" + data.username).then((res) => {
             setData(res.data);
         }).catch((err) => {
             alert(err);
@@ -63,7 +63,7 @@ export default function UserProfile(props) {
                         </Row><br/>
                         <Row>
                             <Col xs={4}>NIC No</Col>
-                            <Col>{data.nic}</Col>
+                            <Col>{data.identificationValue}</Col>
                         </Row><br/>
                         <Row>
                             <Col xs={4}>Date of Birth</Col>
